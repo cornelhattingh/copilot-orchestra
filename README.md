@@ -259,7 +259,7 @@ Users should be able to register, login, and access protected routes.
     - Runs tests to verify they pass.
     - Applies linting/formatting.
 - `Conductor` invokes `code-review-subagent`.
-- `code-review-agent` returns APPROVED.
+- `code-review-agent` returns `APPROVED`.
 - `Conductor` presents summary and commit message to user:
     ```
     feat: Add User model with password hashing
