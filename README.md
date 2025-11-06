@@ -417,7 +417,7 @@ You can create specialized subagents for your workflow:
 3. **Update Conductor** to invoke your new subagent where appropriate.
 4. **Test the integration** with a sample task.
 
-**Example Use Cases:**
+**Ideas for subagents:**
 - **deployment-subagent** - Specialized in deployment configurations.
 - **security-audit-subagent** - Focused on security analysis.
 - **performance-optimization-subagent** - Optimizes code performance.
