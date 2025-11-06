@@ -280,7 +280,7 @@ The cycle repeats for each remaining phase:
 
 Each phase follows: **Implementation → Review → Commit** cycle.
 
-**6. Completion**
+**5. Completion**
 - All phases complete.
 - `Conductor` generates `plans/user-authentication-complete.md` with a full summary of what was accomplished.
 - Your feature is fully tested, reviewed, and committed in logical increments.
@@ -296,6 +296,7 @@ Created after the user approves the plan. It contains:
 - Suggestions of files and functions to create or modify.
 - Tests to write.
 - Open questions and decisions for the User to answer.
+- Useful in case the User or the `Conductor` gets interrupted. You can always refer back to this and have the `Conductor` pick up where it left off.
 
 **Example:** `plans/user-authentication-plan.md`
 
@@ -307,6 +308,7 @@ Created after each phase commit, contains:
 - Tests created/changed.
 - Review status.
 - Git commit message used.
+- If you need to pick up the implementation cycle in the middle of a plan, due to interruption, you can tell the conductor to review the completed phase documents for context on where to start implementing again.
 
 **Example:** `plans/user-authentication-phase-1-complete.md`
 
@@ -344,7 +346,7 @@ Created when all phases are done, contains:
     - Each phase is designed to be independently committable.
     - Smaller commits are easier to review and revert if needed.
     - Creates a clear history of feature development.
-    - The `code-review-agent` specifically looks at uncommitted code as a basis for what to review.
+    - The `code-review-agent` looks for uncommitted code as a basis for what to review.
 
 ### Maximizing Quality
 
