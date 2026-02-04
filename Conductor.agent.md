@@ -54,21 +54,21 @@ For each phase in the plan, execute this cycle:
    - **If FAILED**: Stop and consult user for guidance
 
 ### 2C. Return to User for Commit
-1. **Pause and Present Summary**:
+1. **Write Phase Completion File**: Create `plans/<task-name>/<task-name>-phase-<N>-complete.md` in the plan's subfolder following <phase_complete_style_guide>.
+
+2. **Present Summary and Commit Message in Chat**:
    - Phase number and objective
    - What was accomplished
    - Files/functions created/changed
    - Review status (approved/issues addressed)
+   - **Git commit message** in a plain text code block following <git_commit_style_guide>
+   
+   CRITICAL: Display all this information as a regular chat message BEFORE invoking #askUser tool.
 
-2. **Write Phase Completion File**: Create `plans/<task-name>/<task-name>-phase-<N>-complete.md` in the plan's subfolder following <phase_complete_style_guide>.
-
-3. **Generate Git Commit Message**: Provide a commit message following <git_commit_style_guide> in a plain text code block for easy copying.
-
-4. **MANDATORY STOP**: Wait for user to:
+3. **MANDATORY STOP**: After presenting the summary and commit message above, use #askUser tool to wait for user to:
    - Make the git commit
    - Confirm readiness to proceed to next phase
    - Request changes or abort
-   - CRITICAL: Use #askUser tool for approval to proceed or continue
 
 ### 2D. Continue or Complete
 - If more phases remain: Return to step 2A for next phase
