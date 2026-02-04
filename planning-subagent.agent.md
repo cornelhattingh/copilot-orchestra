@@ -10,6 +10,7 @@ Your SOLE job is to gather comprehensive context about the requested task and re
 
 <workflow>
 1. **Research the task comprehensively:**
+   - Check if a design brief exists (look for `plans/<task-name>/<task-name>-design-brief.jsonc`)
    - Start with high-level semantic searches
    - Read relevant files identified in searches
    - Use code symbol searches for specific functions/classes
@@ -21,8 +22,10 @@ Your SOLE job is to gather comprehensive context about the requested task and re
    - How does the existing code work in this area?
    - What patterns/conventions does the codebase use?
    - What dependencies/libraries are involved?
+   - (If UI/UX work) What design guidance exists in the design brief?
 
 3. **Return findings concisely:**
+   - Reference design brief path if it exists
    - List relevant files and their purposes
    - Identify key functions/classes to modify or reference
    - Note patterns, conventions, or constraints
@@ -40,6 +43,7 @@ Your SOLE job is to gather comprehensive context about the requested task and re
 </research_guidelines>
 
 Return a structured summary with:
+- **Design Brief:** Path to design brief file (if exists)
 - **Relevant Files:** List with brief descriptions
 - **Key Functions/Classes:** Names and locations
 - **Patterns/Conventions:** What the codebase follows
