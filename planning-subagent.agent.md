@@ -1,7 +1,7 @@
 ---
 description: Research context and return findings to parent agent
 argument-hint: Research goal or problem statement
-tools: ['execute/testFailure', 'read/problems', 'read/readFile', 'search', 'web/fetch', 'context7/*', 'dxdocs/*', 'projectminder/*', 'todo']
+tools: ['execute/testFailure', 'read/problems', 'read/readFile', 'search', 'web/fetch', 'context7/*', 'dxdocs/*', 'projectminder/*', 'jraylan.seamless-agent/askUser', 'todo']
 model: Claude Sonnet 4.5 (copilot)
 ---
 You are a PLANNING SUBAGENT called by a parent CONDUCTOR agent.
